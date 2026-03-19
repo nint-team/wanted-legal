@@ -5,42 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Wanted</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #B76E79; }
-        h2 { border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 30px; }
-        .footer { margin-top: 50px; font-size: 0.8em; color: #888; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
+        .container { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #B76E79; text-align: center; border-bottom: 2px solid #B76E79; padding-bottom: 10px; }
+        h2 { color: #444; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 35px; }
+        .lang-content { display: none; }
+        .lang-selector { text-align: right; margin-bottom: 25px; }
+        select { padding: 10px; border-radius: 5px; border: 1px solid #B76E79; color: #B76E79; font-weight: bold; background: white; cursor: pointer; }
+        .footer { margin-top: 50px; font-size: 0.85em; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+        strong { color: #222; }
+        ul li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
-    <h1>Informativa sulla Privacy - Wanted</h1>
-    <p>Ultimo aggiornamento: 19 Marzo 2026</p>
 
-    <h2>1. Titolare del Trattamento</h2>
-    <p>Lo sviluppatore di Wanted è il titolare del trattamento dei dati raccolti tramite l'applicazione.</p>
+<div class="container">
+    <div class="lang-selector">
+        <select id="langSelector" onchange="changeLang(this.value)">
+            <option value="it">🇮🇹 Italiano</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="de">🇩🇪 Deutsch</option>
+        </select>
+    </div>
 
-    <h2>2. Dati Raccolti e Finalità</h2>
-    <ul>
-        <li><strong>Email:</strong> Raccolta tramite Supabase Auth esclusivamente per la gestione dell'account e l'accesso ai propri dati.</li>
-        <li><strong>Contenuti (Foto e Inventario):</strong> Le immagini e i dati degli oggetti sono archiviati su server Supabase.</li>
-        <li><strong>Identificatori Pubblicitari:</strong> Utilizzati da Google AdMob per l'erogazione di annunci.</li>
-    </ul>
+    <div id="content-it" class="lang-content">
+        <h1>Informativa sulla Privacy - Wanted</h1>
+        <p><em>Ultimo aggiornamento: 19 Marzo 2026</em></p>
 
-    <h2>3. Sicurezza e Row Level Security (RLS)</h2>
-    <p>La sicurezza è la nostra priorità. Utilizziamo la tecnologia <strong>Row Level Security (RLS)</strong> di Supabase per garantire che ogni utente possa accedere esclusivamente ai propri dati. Le immagini caricate sono gestite tramite protocolli di crittografia in transito.</p>
+        <h2>1. Titolare del Trattamento</h2>
+        <p>Lo sviluppatore di Wanted è il titolare del trattamento dei dati raccolti tramite l'applicazione:<br>
+        <strong>Davide Visentin</strong><br>
+        Email di contatto: <strong>nint-team@gmail.com</strong></p>
 
-    <h2>4. Servizi di Terze Parti</h2>
-    <p>L'app si avvale di fornitori esterni affidabili:</p>
-    <ul>
-        <li><strong>Supabase:</strong> Database e Storage (Backend).</li>
-        <li><strong>Google AdMob:</strong> Servizi pubblicitari.</li>
-        <li><strong>EmailJS:</strong> Gestione delle richieste di supporto.</li>
-    </ul>
+        <h2>2. Dati Raccolti e Finalità</h2>
+        <ul>
+            <li><strong>Email:</strong> Raccolta tramite Supabase Auth esclusivamente per la gestione dell'account e l'accesso ai propri dati.</li>
+            <li><strong>Contenuti (Foto e Inventario):</strong> Le immagini e i dati degli oggetti sono archiviati su server Supabase in modo sicuro.</li>
+            <li><strong>Identificatori Pubblicitari:</strong> Utilizzati da Google AdMob per l'erogazione di annunci personalizzati o contestuali.</li>
+        </ul>
 
-    <h2>5. Diritti dell'Utente (GDPR)</h2>
-    <p>In conformità con il GDPR, l'utente ha il diritto di accedere, rettificare o eliminare i propri dati. All'interno della sezione "Profilo" dell'app è presente una funzione dedicata per l'eliminazione permanente dell'account e di tutti i dati associati.</p>
+        <h2>3. Sicurezza e Row Level Security (RLS)</h2>
+        <p>La sicurezza è la nostra priorità. Utilizziamo la tecnologia <strong>Row Level Security (RLS)</strong> di Supabase per garantire che ogni utente possa accedere esclusivamente ai propri dati. Le immagini caricate sono gestite tramite protocolli di crittografia in transito e archiviate in bucket protetti.</p>
+
+        <h2>4. Servizi di Terze Parti</h2>
+        <p>L'app si avvale di fornitori esterni affidabili per garantire il servizio:</p>
+        <ul>
+            <li><strong>Supabase:</strong> Infrastruttura Database e Storage (Backend).</li>
+            <li><strong>Google AdMob:</strong> Servizi pubblicitari e monetizzazione.</li>
+            <li><strong>EmailJS:</strong> Gestione tecnica delle richieste di supporto tramite email.</li>
+        </ul>
+
+        <h2>5. Diritti dell'Utente (GDPR)</h2>
+        <p>In conformità con il GDPR, l'utente ha il diritto di accedere, rettificare o eliminare i propri dati in qualsiasi momento. All'interno della sezione "Profilo" dell'app è presente una funzione dedicata per l'eliminazione permanente dell'account e di tutti i dati associati (foto e database) dai nostri sistemi.</p>
+    </div>
+
+    <div id="content-en" class="lang-content">
+        <h1>Privacy Policy - Wanted</h1>
+        <p><em>Last Updated: March 19, 2026</em></p>
+
+        <h2>1. Data Controller</h2>
+        <p>The developer of Wanted is the data controller for the data collected through the application:<br>
+        <strong>Davide Visentin</strong><br>
+        Contact Email: <strong>nint-team@gmail.com</strong></p>
+
+        <h2>2. Data Collected and Purpose</h2>
+        <ul>
+            <li><strong>Email:</strong> Collected via Supabase Auth exclusively for account management and access to your own data.</li>
+            <li><strong>Content (Photos and Inventory):</strong> Images and object data are stored securely on Supabase servers.</li>
+            <li><strong>Advertising Identifiers:</strong> Used by Google AdMob to deliver personalized or contextual advertisements.</li>
+        </ul>
+
+        <h2>3. Security and Row Level Security (RLS)</h2>
+        <p>Security is our priority. We use Supabase <strong>Row Level Security (RLS)</strong> technology to ensure that each user can access only their own data. Uploaded images are managed via encryption-in-transit protocols and stored in protected buckets.</p>
+
+        <h2>4. Third-Party Services</h2>
+        <p>The app uses reliable external providers to ensure the service:</p>
+        <ul>
+            <li><strong>Supabase:</strong> Database and Storage infrastructure (Backend).</li>
+            <li><strong>Google AdMob:</strong> Advertising and monetization services.</li>
+            <li><strong>EmailJS:</strong> Technical management of support requests via email.</li>
+        </ul>
+
+        <h2>5. User Rights (GDPR)</h2>
+        <p>In accordance with the GDPR, users have the right to access, rectify, or delete their data at any time. Within the "Profile" section of the app, there is a dedicated function for the permanent deletion of the account and all associated data (photos and database) from our systems.</p>
+    </div>
+
+    <div id="content-fr" class="lang-content">
+        <h1>Politique de Confidentialité - Wanted</h1>
+        <p><em>Dernière mise à jour : 19 mars 2026</em></p>
+
+        <h2>1. Responsable du Traitement</h2>
+        <p>Le développeur de Wanted est le responsable du traitement des données collectées via l'application :<br>
+        <strong>Davide Visentin</strong><br>
+        Email de contact : <strong>nint-team@gmail.com</strong></p>
+
+        <h2>2. Données Collectées et Finalité</h2>
+        <ul>
+            <li><strong>Email :</strong> Collecté via Supabase Auth exclusivement per la gestion du compte et l'accès à vos propres données.</li>
+            <li><strong>Contenu (Photos et Inventaire) :</strong> Les images et les données des objets sont stockées en toute sécurité sur les serveurs de Supabase.</li>
+            <li><strong>Identifiants Publicitaires :</strong> Utilisés par Google AdMob pour diffuser des publicités personnalisées ou contextuelles.</li>
+        </ul>
+
+        <h2>3. Sécurité et Row Level Security (RLS)</h2>
+        <p>La sécurité est notre priorité. Nous utilisons la technologie <strong>Row Level Security (RLS)</strong> de Supabase pour garantir que chaque utilisateur ne peut accéder qu'à ses propres données. Les images téléchargées sont gérées via des protocoles de cryptage en transit.</p>
+
+        <h2>4. Services Tiers</h2>
+        <p>L'application utilise des prestataires externes fiables pour assurer le service :</p>
+        <ul>
+            <li><strong>Supabase :</strong> Infrastructure de base de données et de stockage (Backend).</li>
+            <li><strong>Google AdMob :</strong> Services de publicité et de monétisation.</li>
+            <li><strong>EmailJS :</strong> Gestion technique des demandes de support par email.</li>
+        </ul>
+
+        <h2>5. Droits de l'Utilisateur (RGPD)</h2>
+        <p>Conformément au RGPD, l'utilisateur a le droit d'accéder, de rectifier ou de supprimer ses données à tout moment. Dans la section "Profil" de l'application, une fonction dédiée permet la suppression permanente du compte et de toutes les données associées (photos et base de données).</p>
+    </div>
+
+    <div id="content-es" class="lang-content">
+        <h1>Política de Privacidad - Wanted</h1>
+        <p><em>Última actualización: 19 de marzo de 2026</em></p>
+
+        <h2>1. Responsable del Tratamiento</h2>
+        <p>El desarrollador de Wanted es el responsable del tratamiento de los datos recogidos a través de la aplicación:<br>
+        <strong>Davide Visentin</strong><br>
+        Correo electrónico: <strong>nint-team@gmail.com</strong></p>
+
+        <h2>2. Datos Recogidos y Finalidad</h2>
+        <ul>
+            <li><strong>Email:</strong> Recogido a través de Supabase Auth exclusivamente para la gestión de la cuenta y el acceso a sus propios datos.</li>
+            <li><strong>Contenido (Fotos e Inventario):</strong> Las imágenes y los datos de los objetos se almacenan de forma segura en los servidores de Supabase.</li>
+            <li><strong>Identificadores Publicitarios:</strong> Utilizados por Google AdMob para ofrecer anuncios personalizados o contextuales.</li>
+        </ul>
+
+        <h2>3. Seguridad y Row Level Security (RLS)</h2>
+        <p>La seguridad es nuestra prioridad. Utilizamos la tecnología <strong>Row Level Security (RLS)</strong> de Supabase para garantizar que cada usuario pueda acceder exclusivamente a sus propios datos.</p>
+
+        <h2>4. Servicios de Terceros</h2>
+        <p>La aplicación utiliza proveedores externos de confianza para garantizar el servicio:</p>
+        <ul>
+            <li><strong>Supabase:</strong> Infraestructura de base de datos y almacenamiento (Backend).</li>
+            <li><strong>Google AdMob:</strong> Servicios publicitarios y monetización.</li>
+            <li><strong>EmailJS:</strong> Gestión técnica de solicitudes de soporte por correo electrónico.</li>
+        </ul>
+
+        <h2>5. Derechos del Usuario (GDPR)</h2>
+        <p>De acuerdo con el GDPR, el usuario tiene derecho a acceder, rectificar o eliminar sus datos en cualquier momento. En la sección "Perfil", existe una función para la eliminación permanente de la cuenta y los datos.</p>
+    </div>
+
+    <div id="content-de" class="lang-content">
+        <h1>Datenschutzerklärung - Wanted</h1>
+        <p><em>Zuletzt aktualisiert: 19. März 2026</em></p>
+
+        <h2>1. Verantwortlicher</h2>
+        <p>Der Entwickler von Wanted ist der Verantwortliche für die über die Anwendung erhobenen Daten:<br>
+        <strong>Davide Visentin</strong><br>
+        Kontakt-E-Mail: <strong>nint-team@gmail.com</strong></p>
+
+        <h2>2. Erhobene Daten und Zweck</h2>
+        <ul>
+            <li><strong>E-Mail:</strong> Erhoben über Supabase Auth ausschließlich für die Kontoverwaltung und den Zugriff auf eigene Daten.</li>
+            <li><strong>Inhalte (Fotos und Inventar):</strong> Bilder und Objektdaten werden sicher auf Supabase-Servern gespeichert.</li>
+            <li><strong>Werbe-Identifikatoren:</strong> Wird von Google AdMob verwendet, um personalisierte oder kontextbezogene Werbung bereitzustellen.</li>
+        </ul>
+
+        <h2>3. Sicherheit und Row Level Security (RLS)</h2>
+        <p>Sicherheit ist unsere Priorität. Wir verwenden die <strong>Row Level Security (RLS)</strong>-Technologie von Supabase, um sicherzustellen, dass jeder Benutzer nur auf seine eigenen Daten zugreifen kann.</p>
+
+        <h2>4. Dienste von Drittanbietern</h2>
+        <p>Die App nutzt zuverlässige externe Anbieter, um den Dienst zu gewährleisten:</p>
+        <ul>
+            <li><strong>Supabase:</strong> Datenbank- und Speicherinfrastruktur (Backend).</li>
+            <li><strong>Google AdMob:</strong> Werbe- und Monetarisierungsdienste.</li>
+            <li><strong>EmailJS:</strong> Technische Verwaltung von Supportanfragen per E-Mail.</li>
+        </ul>
+
+        <h2>5. Nutzerrechte (DSGVO)</h2>
+        <p>Gemäß der DSGVO haben Nutzer das Recht, ihre Daten jederzeit einzusehen, zu korrigieren oder zu löschen. Im Bereich "Profil" gibt es eine Funktion zur dauerhaften Löschung des Kontos und aller Daten.</p>
+    </div>
 
     <div class="footer">
-        <p>&copy; 2026 Wanted - Tutti i diritti riservati.</p>
+        <p>&copy; 2026 Wanted - All rights reserved.</p>
     </div>
+</div>
+
+<script>
+    function changeLang(lang) {
+        document.querySelectorAll('.lang-content').forEach(el => el.style.display = 'none');
+        const selected = document.getElementById('content-' + lang);
+        if (selected) {
+            selected.style.display = 'block';
+            document.getElementById('langSelector').value = lang;
+        } else {
+            document.getElementById('content-en').style.display = 'block';
+        }
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang') || 'it';
+    changeLang(langParam);
+</script>
+
 </body>
 </html>
