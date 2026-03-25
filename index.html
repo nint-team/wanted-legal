@@ -4,17 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Wanted</title>
+    <meta name="theme-color" content="#D9A070">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
-        .container { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #B76E79; text-align: center; border-bottom: 2px solid #B76E79; padding-bottom: 10px; }
-        h2 { color: #444; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 35px; }
+        :root {
+            --gold: #D9A070;
+            --bg-light: #fdfdfd;
+            --text-dark: #2c2c2c;
+            --text-muted: #666;
+            --shadow: rgba(217, 160, 112, 0.08);
+        }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            line-height: 1.7; 
+            color: var(--text-dark); 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            background-color: var(--bg-light); 
+        }
+
+        .container { 
+            background: white; 
+            padding: 50px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px var(--shadow); 
+            border: 1px solid rgba(217, 160, 112, 0.1);
+        }
+
+        h1 { 
+            font-family: 'Cinzel', serif;
+            color: var(--gold); 
+            text-align: center; 
+            font-size: 2em;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 20px auto 0;
+            opacity: 0.5;
+        }
+
+        h2 { 
+            font-family: 'Cinzel', serif;
+            color: var(--gold); 
+            border-bottom: 1px solid rgba(217, 160, 112, 0.2); 
+            padding-bottom: 8px; 
+            margin-top: 45px; 
+            font-size: 1.3em;
+            letter-spacing: 1px;
+        }
+
         .lang-content { display: none; }
-        .lang-selector { text-align: right; margin-bottom: 25px; }
-        select { padding: 10px; border-radius: 5px; border: 1px solid #B76E79; color: #B76E79; font-weight: bold; background: white; cursor: pointer; }
-        .footer { margin-top: 50px; font-size: 0.85em; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
-        strong { color: #222; }
-        ul li { margin-bottom: 10px; }
+
+        .lang-selector { 
+            text-align: right; 
+            margin-bottom: 40px; 
+        }
+
+        select { 
+            padding: 10px 15px; 
+            border-radius: 12px; 
+            border: 1.5px solid var(--gold); 
+            color: var(--gold); 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600; 
+            background: white; 
+            cursor: pointer; 
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        select:hover {
+            background: rgba(217, 160, 112, 0.05);
+        }
+
+        .footer { 
+            margin-top: 60px; 
+            font-size: 0.9em; 
+            color: var(--text-muted); 
+            text-align: center; 
+            border-top: 1px solid rgba(0,0,0,0.05); 
+            padding-top: 30px; 
+        }
+
+        strong { color: #000; font-weight: 600; }
+        ul { padding-left: 20px; }
+        ul li { margin-bottom: 12px; }
+        em { color: var(--gold); font-style: normal; font-weight: 500; }
+
+        @media (max-width: 600px) {
+            .container { padding: 25px; }
+            h1 { font-size: 1.5em; }
+            .lang-selector { text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -31,161 +122,106 @@
     </div>
 
     <div id="content-it" class="lang-content">
-        <h1>Informativa sulla Privacy - Wanted</h1>
+        <h1>Informativa sulla Privacy</h1>
         <p><em>Ultimo aggiornamento: 19 Marzo 2026</em></p>
-
         <h2>1. Titolare del Trattamento</h2>
         <p>Lo sviluppatore di Wanted è il titolare del trattamento dei dati raccolti tramite l'applicazione:<br>
         <strong>Davide Visentin</strong><br>
         Email di contatto: <strong>nint-team@gmail.com</strong></p>
-
         <h2>2. Dati Raccolti e Finalità</h2>
         <ul>
-            <li><strong>Email:</strong> Raccolta tramite Supabase Auth esclusivamente per la gestione dell'account e l'accesso ai propri dati.</li>
-            <li><strong>Contenuti (Foto e Inventario):</strong> Le immagini e i dati degli oggetti sono archiviati su server Supabase in modo sicuro.</li>
-            <li><strong>Identificatori Pubblicitari:</strong> Utilizzati da Google AdMob per l'erogazione di annunci personalizzati o contestuali.</li>
+            <li><strong>Email:</strong> Raccolta tramite Supabase Auth esclusivamente per la gestione dell'account.</li>
+            <li><strong>Contenuti (Foto e Inventario):</strong> Archiviati su server Supabase in modo sicuro.</li>
+            <li><strong>Identificatori Pubblicitari:</strong> Utilizzati da Google AdMob per annunci personalizzati.</li>
         </ul>
-
-        <h2>3. Sicurezza e Row Level Security (RLS)</h2>
-        <p>La sicurezza è la nostra priorità. Utilizziamo la tecnologia <strong>Row Level Security (RLS)</strong> di Supabase per garantire che ogni utente possa accedere esclusivamente ai propri dati. Le immagini caricate sono gestite tramite protocolli di crittografia in transito e archiviate in bucket protetti.</p>
-
+        <h2>3. Sicurezza e RLS</h2>
+        <p>Utilizziamo la tecnologia <strong>Row Level Security (RLS)</strong> di Supabase per garantire che ogni utente possa accedere esclusivamente ai propri dati.</p>
         <h2>4. Servizi di Terze Parti</h2>
-        <p>L'app si avvale di fornitori esterni affidabili per garantire il servizio:</p>
-        <ul>
-            <li><strong>Supabase:</strong> Infrastruttura Database e Storage (Backend).</li>
-            <li><strong>Google AdMob:</strong> Servizi pubblicitari e monetizzazione.</li>
-            <li><strong>EmailJS:</strong> Gestione tecnica delle richieste di supporto tramite email.</li>
-        </ul>
-
-        <h2>5. Diritti dell'Utente (GDPR)</h2>
-        <p>In conformità con il GDPR, l'utente ha il diritto di accedere, rettificare o eliminare i propri dati in qualsiasi momento. All'interno della sezione "Profilo" dell'app è presente una funzione dedicata per l'eliminazione permanente dell'account e di tutti i dati associati (foto e database) dai nostri sistemi.</p>
+        <p>L'app si avvale di: <strong>Supabase</strong> (Backend), <strong>Google AdMob</strong> (Advertising) e <strong>EmailJS</strong> (Supporto).</p>
+        <h2>5. Diritti dell'Utente</h2>
+        <p>In conformità con il GDPR, puoi eliminare i tuoi dati in qualsiasi momento tramite la funzione dedicata nella sezione "Profilo" dell'app.</p>
     </div>
 
     <div id="content-en" class="lang-content">
-        <h1>Privacy Policy - Wanted</h1>
+        <h1>Privacy Policy</h1>
         <p><em>Last Updated: March 19, 2026</em></p>
-
         <h2>1. Data Controller</h2>
-        <p>The developer of Wanted is the data controller for the data collected through the application:<br>
+        <p>The developer of Wanted is the data controller for the data collected:<br>
         <strong>Davide Visentin</strong><br>
         Contact Email: <strong>nint-team@gmail.com</strong></p>
-
         <h2>2. Data Collected and Purpose</h2>
         <ul>
-            <li><strong>Email:</strong> Collected via Supabase Auth exclusively for account management and access to your own data.</li>
-            <li><strong>Content (Photos and Inventory):</strong> Images and object data are stored securely on Supabase servers.</li>
-            <li><strong>Advertising Identifiers:</strong> Used by Google AdMob to deliver personalized or contextual advertisements.</li>
+            <li><strong>Email:</strong> Collected via Supabase Auth for account management only.</li>
+            <li><strong>Content (Photos & Inventory):</strong> Securely stored on Supabase servers.</li>
+            <li><strong>Ad Identifiers:</strong> Used by Google AdMob for personalized ads.</li>
         </ul>
-
-        <h2>3. Security and Row Level Security (RLS)</h2>
-        <p>Security is our priority. We use Supabase <strong>Row Level Security (RLS)</strong> technology to ensure that each user can access only their own data. Uploaded images are managed via encryption-in-transit protocols and stored in protected buckets.</p>
-
+        <h2>3. Security and RLS</h2>
+        <p>We use <strong>Row Level Security (RLS)</strong> to ensure that users can only access their own data.</p>
         <h2>4. Third-Party Services</h2>
-        <p>The app uses reliable external providers to ensure the service:</p>
-        <ul>
-            <li><strong>Supabase:</strong> Database and Storage infrastructure (Backend).</li>
-            <li><strong>Google AdMob:</strong> Advertising and monetization services.</li>
-            <li><strong>EmailJS:</strong> Technical management of support requests via email.</li>
-        </ul>
-
-        <h2>5. User Rights (GDPR)</h2>
-        <p>In accordance with the GDPR, users have the right to access, rectify, or delete their data at any time. Within the "Profile" section of the app, there is a dedicated function for the permanent deletion of the account and all associated data (photos and database) from our systems.</p>
+        <p>Providers: <strong>Supabase</strong> (Backend), <strong>Google AdMob</strong> (Ads), and <strong>EmailJS</strong> (Support).</p>
+        <h2>5. User Rights</h2>
+        <p>Under GDPR, you can delete your account and all associated data anytime via the "Profile" section in the app.</p>
     </div>
 
     <div id="content-fr" class="lang-content">
-        <h1>Politique de Confidentialité - Wanted</h1>
-        <p><em>Dernière mise à jour : 19 mars 2026</em></p>
-
+        <h1>Politique de Confidentialité</h1>
+        <p><em>Mise à jour : 19 mars 2026</em></p>
         <h2>1. Responsable du Traitement</h2>
-        <p>Le développeur de Wanted est le responsable du traitement des données collectées via l'application :<br>
-        <strong>Davide Visentin</strong><br>
-        Email de contact : <strong>nint-team@gmail.com</strong></p>
-
-        <h2>2. Données Collectées et Finalité</h2>
+        <p><strong>Davide Visentin</strong><br>Email: <strong>nint-team@gmail.com</strong></p>
+        <h2>2. Données Collectées</h2>
         <ul>
-            <li><strong>Email :</strong> Collecté via Supabase Auth exclusivement per la gestion du compte et l'accès à vos propres données.</li>
-            <li><strong>Contenu (Photos et Inventaire) :</strong> Les images et les données des objets sont stockées en toute sécurité sur les serveurs de Supabase.</li>
-            <li><strong>Identifiants Publicitaires :</strong> Utilisés par Google AdMob pour diffuser des publicités personnalisées ou contextuelles.</li>
+            <li><strong>Email :</strong> Via Supabase Auth pour la gestion du compte.</li>
+            <li><strong>Contenu :</strong> Photos et inventaire stockés sur Supabase.</li>
+            <li><strong>Publicité :</strong> Identifiants Google AdMob.</li>
         </ul>
-
-        <h2>3. Sécurité et Row Level Security (RLS)</h2>
-        <p>La sécurité est notre priorité. Nous utilisons la technologie <strong>Row Level Security (RLS)</strong> de Supabase pour garantir que chaque utilisateur ne peut accéder qu'à ses propres données. Les images téléchargées sont gérées via des protocoles de cryptage en transit.</p>
-
+        <h2>3. Sécurité</h2>
+        <p>Nous utilisons <strong>Row Level Security (RLS)</strong> pour protéger vos données personnelles.</p>
         <h2>4. Services Tiers</h2>
-        <p>L'application utilise des prestataires externes fiables pour assurer le service :</p>
-        <ul>
-            <li><strong>Supabase :</strong> Infrastructure de base de données et de stockage (Backend).</li>
-            <li><strong>Google AdMob :</strong> Services de publicité et de monétisation.</li>
-            <li><strong>EmailJS :</strong> Gestion technique des demandes de support par email.</li>
-        </ul>
-
-        <h2>5. Droits de l'Utilisateur (RGPD)</h2>
-        <p>Conformément au RGPD, l'utilisateur a le droit d'accéder, de rectifier ou de supprimer ses données à tout moment. Dans la section "Profil" de l'application, une fonction dédiée permet la suppression permanente du compte et de toutes les données associées (photos et base de données).</p>
+        <p><strong>Supabase</strong>, <strong>Google AdMob</strong> et <strong>EmailJS</strong>.</p>
+        <h2>5. Vos Droits</h2>
+        <p>Vous pouvez supprimer votre compte e vos données via la section "Profil" de l'application.</p>
     </div>
 
     <div id="content-es" class="lang-content">
-        <h1>Política de Privacidad - Wanted</h1>
-        <p><em>Última actualización: 19 de marzo de 2026</em></p>
-
+        <h1>Política de Privacidad</h1>
+        <p><em>Actualización: 19 de marzo de 2026</em></p>
         <h2>1. Responsable del Tratamiento</h2>
-        <p>El desarrollador de Wanted es el responsable del tratamiento de los datos recogidos a través de la aplicación:<br>
-        <strong>Davide Visentin</strong><br>
-        Correo electrónico: <strong>nint-team@gmail.com</strong></p>
-
-        <h2>2. Datos Recogidos y Finalidad</h2>
+        <p><strong>Davide Visentin</strong><br>Email: <strong>nint-team@gmail.com</strong></p>
+        <h2>2. Datos Recogidos</h2>
         <ul>
-            <li><strong>Email:</strong> Recogido a través de Supabase Auth exclusivamente para la gestión de la cuenta y el acceso a sus propios datos.</li>
-            <li><strong>Contenido (Fotos e Inventario):</strong> Las imágenes y los datos de los objetos se almacenan de forma segura en los servidores de Supabase.</li>
-            <li><strong>Identificadores Publicitarios:</strong> Utilizados por Google AdMob para ofrecer anuncios personalizados o contextuales.</li>
+            <li><strong>Email:</strong> Supabase Auth para la gestión de la cuenta.</li>
+            <li><strong>Contenido:</strong> Fotos e inventario almacenados en Supabase.</li>
+            <li><strong>Publicidad:</strong> Identificadores de Google AdMob.</li>
         </ul>
-
-        <h2>3. Seguridad y Row Level Security (RLS)</h2>
-        <p>La seguridad es nuestra prioridad. Utilizamos la tecnología <strong>Row Level Security (RLS)</strong> de Supabase para garantizar que cada usuario pueda acceder exclusivamente a sus propios datos.</p>
-
+        <h2>3. Seguridad</h2>
+        <p>Protegemos sus datos con la tecnología <strong>Row Level Security (RLS)</strong>.</p>
         <h2>4. Servicios de Terceros</h2>
-        <p>La aplicación utiliza proveedores externos de confianza para garantizar el servicio:</p>
-        <ul>
-            <li><strong>Supabase:</strong> Infraestructura de base de datos y almacenamiento (Backend).</li>
-            <li><strong>Google AdMob:</strong> Servicios publicitarios y monetización.</li>
-            <li><strong>EmailJS:</strong> Gestión técnica de solicitudes de soporte por correo electrónico.</li>
-        </ul>
-
-        <h2>5. Derechos del Usuario (GDPR)</h2>
-        <p>De acuerdo con el GDPR, el usuario tiene derecho a acceder, rectificar o eliminar sus datos en cualquier momento. En la sección "Perfil", existe una función para la eliminación permanente de la cuenta y los datos.</p>
+        <p><strong>Supabase</strong>, <strong>Google AdMob</strong> y <strong>EmailJS</strong>.</p>
+        <h2>5. Sus Derechos</h2>
+        <p>Puede eliminar su cuenta y datos en cualquier momento desde la sección "Perfil".</p>
     </div>
 
     <div id="content-de" class="lang-content">
-        <h1>Datenschutzerklärung - Wanted</h1>
+        <h1>Datenschutzerklärung</h1>
         <p><em>Zuletzt aktualisiert: 19. März 2026</em></p>
-
         <h2>1. Verantwortlicher</h2>
-        <p>Der Entwickler von Wanted ist der Verantwortliche für die über die Anwendung erhobenen Daten:<br>
-        <strong>Davide Visentin</strong><br>
-        Kontakt-E-Mail: <strong>nint-team@gmail.com</strong></p>
-
-        <h2>2. Erhobene Daten und Zweck</h2>
+        <p><strong>Davide Visentin</strong><br>E-Mail: <strong>nint-team@gmail.com</strong></p>
+        <h2>2. Erhobene Daten</h2>
         <ul>
-            <li><strong>E-Mail:</strong> Erhoben über Supabase Auth ausschließlich für die Kontoverwaltung und den Zugriff auf eigene Daten.</li>
-            <li><strong>Inhalte (Fotos und Inventar):</strong> Bilder und Objektdaten werden sicher auf Supabase-Servern gespeichert.</li>
-            <li><strong>Werbe-Identifikatoren:</strong> Wird von Google AdMob verwendet, um personalisierte oder kontextbezogene Werbung bereitzustellen.</li>
+            <li><strong>E-Mail:</strong> Über Supabase Auth zur Kontoverwaltung.</li>
+            <li><strong>Inhalt:</strong> Fotos und Inventar auf Supabase-Servern.</li>
+            <li><strong>Werbung:</strong> Google AdMob-Identifikatoren.</li>
         </ul>
-
-        <h2>3. Sicherheit und Row Level Security (RLS)</h2>
-        <p>Sicherheit ist unsere Priorität. Wir verwenden die <strong>Row Level Security (RLS)</strong>-Technologie von Supabase, um sicherzustellen, dass jeder Benutzer nur auf seine eigenen Daten zugreifen kann.</p>
-
-        <h2>4. Dienste von Drittanbietern</h2>
-        <p>Die App nutzt zuverlässige externe Anbieter, um den Dienst zu gewährleisten:</p>
-        <ul>
-            <li><strong>Supabase:</strong> Datenbank- und Speicherinfrastruktur (Backend).</li>
-            <li><strong>Google AdMob:</strong> Werbe- und Monetarisierungsdienste.</li>
-            <li><strong>EmailJS:</strong> Technische Verwaltung von Supportanfragen per E-Mail.</li>
-        </ul>
-
-        <h2>5. Nutzerrechte (DSGVO)</h2>
-        <p>Gemäß der DSGVO haben Nutzer das Recht, ihre Daten jederzeit einzusehen, zu korrigieren oder zu löschen. Im Bereich "Profil" gibt es eine Funktion zur dauerhaften Löschung des Kontos und aller Daten.</p>
+        <h2>3. Sicherheit</h2>
+        <p>Wir verwenden <strong>Row Level Security (RLS)</strong> für maximalen Datenschutz.</p>
+        <h2>4. Drittanbieter</h2>
+        <p><strong>Supabase</strong>, <strong>Google AdMob</strong> und <strong>EmailJS</strong>.</p>
+        <h2>5. Ihre Rechte</h2>
+        <p>Sie können Ihr Konto und alle Daten jederzeit über den Bereich "Profil" löschen.</p>
     </div>
 
     <div class="footer">
+        <p><strong>Wanted</strong> - Inventory System</p>
         <p>&copy; 2026 Wanted - All rights reserved.</p>
     </div>
 </div>
@@ -193,17 +229,18 @@
 <script>
     function changeLang(lang) {
         document.querySelectorAll('.lang-content').forEach(el => el.style.display = 'none');
-        const selected = document.getElementById('content-' + lang);
-        if (selected) {
-            selected.style.display = 'block';
-            document.getElementById('langSelector').value = lang;
-        } else {
-            document.getElementById('content-en').style.display = 'block';
+        let selected = document.getElementById('content-' + lang);
+        if (!selected) {
+            lang = 'en';
+            selected = document.getElementById('content-en');
         }
+        selected.style.display = 'block';
+        document.getElementById('langSelector').value = lang;
     }
 
+    // Rilevamento lingua da URL o Browser
     const urlParams = new URLSearchParams(window.location.search);
-    const langParam = urlParams.get('lang') || 'it';
+    const langParam = urlParams.get('lang') || navigator.language.split('-')[0] || 'it';
     changeLang(langParam);
 </script>
 
